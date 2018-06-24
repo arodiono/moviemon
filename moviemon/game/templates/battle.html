@@ -1,0 +1,26 @@
+{% extends 'core.html' %}
+
+{% block content %}
+
+    <div class="console">
+        <div class="map" style="background: url('/static/bg.jpg') no-repeat center center">
+            <div class="details">
+                <div class="details-poster"><img height="400" src="{{ movie.Poster }}" alt=""></div>
+                <div class="details-info">
+                    <ul style="list-style: none;">
+                        <li><h4>Moviemon power: {{ movie.imdbRating }}</h4></li>
+                        <li><h4>Your power: {{ data.player_power }}</h4></li>
+                        <li><hr></li>
+                        <li><h4>Success chance: {{ chance }}%</h4></li>
+                        <p class="instruction">A - Launch movieball</p>
+                        <p class="instruction">B - Back</p>
+                        <h4 class="instruction">{{ data.message }}</h4>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% include 'controls.html' %}
+        {% include 'console.html' %}
+    </div>
+
+{% endblock%}

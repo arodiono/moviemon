@@ -1,0 +1,5 @@
+<div class="map" style="background: url('/static/map.png') no-repeat center center">
+    <div class="player" style="top: {% widthratio data.player_position.y 1 40 %}px; left: {% widthratio data.player_position.x 1 40 %}px;"></div>
+    <div class="message">{{ data.message }}</div>
+</div>
+<div class="movieball"><span>Movieball: </span>{{ data.movieball }}</div>

@@ -42,7 +42,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -112,19 +112,24 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
+STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static/static-only")
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 # Game settings
 
-STATIC_URL = '/static/'
-
 MAP_SIZE = {
-    'x': 15,
-    'y': 15
+    'x': 18,
+    'y': 10
 }
 
 PLAYER_POSITION = {
-    'x': 7,
-    'y': 7
+    'x': 9,
+    'y': 5
 }
 
 MOVIEMONS = [
@@ -139,7 +144,6 @@ MOVIEMONS = [
     'tt4881806',
     'tt1365519',
     'tt1137450',
-    'tt7431594',
     'tt1620680',
     'tt2296777'
 ]

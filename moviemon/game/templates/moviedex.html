@@ -1,0 +1,24 @@
+{% extends 'core.html' %}
+
+{% block content %}
+
+    <div class="console">
+        <div class="map" style="background: url('/static/bg.jpg') no-repeat center center">
+            <div class="movidex">
+                {% for key, movie in moviedexes %}
+                    {% if  p_next|add:-1 == key %}
+                        <img class="movidex-item active" src="{{ movie.Poster }}">
+                    {% else %}
+                        <img class="movidex-item" src="{{ movie.Poster }}">
+                    {% endif %}
+                {% empty %}
+                    <li>No moviemons in this list!</li>
+                {% endfor %}
+                <p class="instruction">B - Back</p>
+            </div>
+        </div>
+        {% include 'controls.html' %}
+        {% include 'console.html' %}
+    </div>
+
+{% endblock%}

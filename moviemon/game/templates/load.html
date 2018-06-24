@@ -1,0 +1,19 @@
+{% extends 'core.html' %}
+
+{% block content %}
+
+    <div class="console">
+        <div class="map" style="background: url('/static/bg.jpg') no-repeat center center">
+            <div class="map-info">
+                <p>A  -  Save</p>
+                <p>B  -  Back</p>
+                <form enctype="multipart/form-data" method="post">
+                    <input type="file">
+                </form>
+            </div>
+        </div>
+        {% include 'controls.html' %}
+        {% include 'console.html' %}
+    </div>
+
+{% endblock%}

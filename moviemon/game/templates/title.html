@@ -1,0 +1,16 @@
+{% extends 'core.html' %}
+
+{% block content %}
+
+    <div class="console">
+        <div class="map" style="background: url('/static/bg.jpg') no-repeat center center">
+            <div class="map-info">
+                <p>A  -  New Game</p>
+                <p>B  -  Load Game</p>
+            </div>
+        </div>
+        {% include 'controls.html' %}
+        {% include 'console.html' %}
+    </div>
+
+{% endblock %}

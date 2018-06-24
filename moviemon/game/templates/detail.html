@@ -1,0 +1,26 @@
+{% extends 'core.html' %}
+
+{% block content %}
+
+    <div class="console">
+        <div class="map" style="background: url('/static/bg.jpg') no-repeat center center">
+            <div class="details">
+                <div class="details-poster"><img height="400" src="{{ movie.Poster }}" alt=""></div>
+                <div class="details-info">
+                    <ul style="list-style: none;">
+                        <li><h3>{{ movie.Title }}</h3></li>
+                        <li><h4>{{ movie.imdbRating }}</h4></li>
+                        <li><h4>{{ movie.Year }}</h4></li>
+                        <li><p>{{ movie.Director }}</p></li>
+                        <li><p>{{ movie.Actors }}</p></li>
+                        <li><p>{{ movie.Plot|truncatechars:170 }}</p></li>
+                        <p class="instruction">B - Back</p>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% include 'controls.html' %}
+        {% include 'console.html' %}
+    </div>
+
+{% endblock%}

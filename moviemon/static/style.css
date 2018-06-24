@@ -1,0 +1,156 @@
+body {
+    font-family: sans-serif;
+    background-color: #eeeeee;
+}
+.console {
+    display: block;
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+}
+.map {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 720px;
+    height: 400px;
+    background: url('map.png') 0 0;
+    border-radius: 10px;
+}
+.map-info {
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.player {
+    position: absolute;
+    background: url('player.png') no-repeat center center;
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+}
+.a, .b {
+    position: absolute;
+    width: 69px;
+    height: 69px;
+    background-color: #482a50;
+    border-radius: 50%;
+}
+.a {
+    top: 619px;
+    left: 704px;
+}
+.b {
+    top: 661px;
+    left: 610px;
+}
+
+.up, .down, .left, .right {
+    position: absolute;
+    width: 50px;
+    height: 45px;
+    background-color: #25292b;
+    border-radius: 4px;
+}
+.up {
+    top: 611px;
+    left: 99px;
+}
+.down {
+    top: 709px;
+    left: 99px;
+}
+.left {
+    height: 52px;
+    width: 46px;
+    top: 656px;
+    left: 54px;
+}
+.right {
+    height: 52px;
+    width: 46px;
+    top: 656px;
+    left: 149px;
+}
+.select, .start {
+    position: absolute;
+    background-color: #25292b;
+    border-radius: 4px;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 11px;
+    padding: 5px 25px;
+    text-decoration: none;
+}
+.select {
+    top: 670px;
+    left: 330px;
+}
+.start {
+    top: 670px;
+    left: 440px;
+}
+
+.details {
+    display: flex;
+}
+.details-poster .details-info {
+    width: 50%;
+    max-height: 400px;
+}
+
+.instruction {
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.movieball {
+    top: 570px;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+}
+
+.message {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.movidex {
+    display: flex;
+}
+.movidex-item {
+    width: 20%;
+    height: 50%;
+}
+.active {
+    border: 1px solid red;
+}
+.start-l, .select-l {
+    position: absolute;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.start-l {
+    top: 690px;
+    left: 337px;
+}
+
+.select-l {
+    top: 690px;
+    left: 444px;
+}

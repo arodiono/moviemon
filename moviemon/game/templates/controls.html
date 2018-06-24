@@ -1,0 +1,12 @@
+{% for k, v in controls.items %}
+    {% if v %}
+        <form method="post" action="{{ v.action }}">
+            <input name="param" type="hidden" value="{{ v.params }}">
+            <button class="{{ k }}"></button>
+        </form>
+    {% else %}
+        <div class="{{ k }}"></div>
+    {% endif %}
+{% endfor %}
+<div class="start-l">START</div>
+<div class="select-l">SELECT</div>
